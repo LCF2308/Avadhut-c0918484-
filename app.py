@@ -1,11 +1,18 @@
 from urllib.parse import quote_plus
 from flask import Flask, render_template
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 
-username = "c0918484"  # replace with your actual username
-password = "URrOZzeDYKu7YH0c"  # replace with your actual password
+load_dotenv() #load env variables from .env files
+
+MONGODB_USERNAME = os.getenv('username')
+MONGODB_PASSWORD = os.getenv('password')
+
+# username = "c0918484"  
+# password = "URrOZzeDYKu7YH0c" 
 
 # # URL-encode the username and password
 encoded_username = quote_plus(username)
