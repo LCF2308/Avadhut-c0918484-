@@ -8,11 +8,19 @@ app = Flask(__name__)
 
 load_dotenv() #load env variables from .env files
 
+<<<<<<< HEAD
 MONGODB_USERNAME = os.getenv('username')
 MONGODB_PASSWORD = os.getenv('password')
 
 # username = "c0918484"  
 # password = "URrOZzeDYKu7YH0c" 
+=======
+# MONGODB_USERNAME = os.getenv('username')
+# MONGODB_PASSWORD = os.getenv('password')
+
+username = "c0918484"  
+password = "URrOZzeDYKu7YH0c" 
+>>>>>>> c7a3905 (Added test files Assignment 4)
 
 # # URL-encode the username and password
 encoded_username = quote_plus(username)
